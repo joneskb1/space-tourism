@@ -1,0 +1,173 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.33rem;
+}
+
+.navbar .hamburger {
+  width: 24px;
+  height: 21px;
+}
+
+.navbar .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar .list-large-screen li span {
+  display: none;
+}
+
+/* popout */
+
+.nav-popout {
+  position: absolute;
+  top: 0;
+  left: 32%;
+  height: 100%;
+  width: 68%;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  z-index: 2;
+}
+
+.nav-popout .close-icon {
+  width: 19px;
+  height: 19px;
+  margin: 1.33rem 1.33rem 0 85%;
+}
+
+.nav-popout ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+}
+
+.nav-popout ul li {
+  list-style-type: none;
+  padding-bottom: 2rem;
+}
+
+.nav-popout ul {
+  padding: 3rem 0 0 1.33rem;
+}
+
+.nav-popout ul li span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2.7px;
+  line-height: 19.2px;
+  margin-right: 5px;
+}
+
+.nav-popout.hide,
+.navbar .list-large-screen,
+.navbar hr {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar .hamburger,
+  .nav-popout {
+    display: none;
+  }
+
+  .navbar .logo {
+    width: 48px;
+    height: 48px;
+    margin-left: 39px;
+    margin-top: 24px;
+  }
+
+  .navbar {
+    padding: 0;
+    align-items: flex-start;
+  }
+
+  .navbar .list-large-screen {
+    display: flex;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(40.7742px);
+    list-style-type: none;
+    height: 96px;
+    width: 450px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+  }
+
+  .navbar .list-large-screen a {
+    text-decoration: none;
+    font-family: "Barlow Condensed", sans-serif;
+    color: white;
+    font-size: 14px;
+    line-height: 16.8px;
+    letter-spacing: 2.36px;
+    cursor: pointer;
+  }
+
+  .navbar .list-large-screen a.active {
+    border-bottom: 3px solid white;
+    padding-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .navbar .list-large-screen li span,
+  .navbar hr {
+    display: inline;
+  }
+
+  .navbar {
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .navbar .logo {
+    margin: 0 0 0 55px;
+  }
+
+  .navbar hr {
+    width: 473px;
+    height: 1px;
+    background-color: white;
+    opacity: 0.25;
+    position: absolute;
+    top: auto;
+    left: 9rem;
+    z-index: 2;
+  }
+
+  .navbar .list-large-screen {
+    width: 830px;
+  }
+
+  .navbar .list-large-screen li span,
+  .navbar .list-large-screen li a {
+    font-family: "Barlow Condensed";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
+  }
+
+  .navbar .list-large-screen li span {
+    margin-right: 4px;
+  }
+
+  .navbar .list-large-screen li a {
+    font-weight: 400;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* .navbar .list-large-screen a:hover,
+  .navbar .list-large-screen a:active {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.05);
+  } */
+}

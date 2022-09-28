@@ -1,0 +1,154 @@
+.crew {
+  background: url("../assets/crew/background-crew-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+}
+
+.crew .crew-title {
+  font-family: "Barlow Condensed", sans-serif;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  line-height: 19px;
+  text-align: center;
+}
+
+.crew .crew-title span {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  color: white;
+  opacity: 0.25;
+  margin-right: 18px;
+  font-size: 16px;
+}
+
+.crew .crew-img {
+  width: 180px;
+  height: 222px;
+  margin: 3rem auto 0 auto;
+  display: block;
+}
+
+.crew hr {
+  background-color: #383b4b;
+  height: 1px;
+  width: 327px;
+  border: none;
+  margin: 0 auto;
+}
+
+.crew .dot-box {
+  display: flex;
+  justify-content: space-between;
+  width: 88px;
+  height: 10px;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+}
+
+.crew .dot-box a {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: white;
+  opacity: 0.17;
+}
+
+.crew .dot-box .active {
+  opacity: 1;
+}
+
+.crew .role {
+  font-family: "Bellefair", serif;
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.crew .name {
+  font-family: "Bellefair", serif;
+  color: var(--white);
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5rem 0 1rem 0;
+}
+
+.crew .bio {
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--gray);
+  padding: 0 1.4rem 4.5rem 1.4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .crew {
+    background: url("../assets/crew/background-crew-tablet.jpg") no-repeat;
+  }
+
+  .crew .crew-title {
+    margin-left: 39px;
+    margin-top: 3rem;
+    text-align: initial;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+
+  .crew .crew-title span {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 3.375px;
+  }
+  .crew hr {
+    display: none;
+  }
+
+  .crew .grid-box {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 3;
+  }
+
+  .crew .crew-img {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .crew .dot-box {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 0rem;
+  }
+
+  .crew .crew-text-box {
+    max-width: 458px;
+    margin: 3rem auto 2rem auto;
+  }
+  .crew .crew-text-box .role {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .crew .crew-text-box .name {
+    font-size: 40px;
+    line-height: 46px;
+    padding: 0.5rem 0 1rem 0;
+  }
+  .crew .crew-text-box .bio {
+    font-size: 16px;
+    line-height: 28px;
+    padding: 0;
+  }
+
+  .crew .crew-img {
+    width: 456px;
+    height: 500px;
+    margin: 2rem auto 0 auto;
+  }
+}
