@@ -1,8 +1,10 @@
 .tech {
   background: url("../assets/tech/background-technology-mobile.jpg");
   background-repeat: no-repeat;
-  background-size: 100% 100%;
-  height: 100%;
+  background-size: cover;
+  /* height: 100%; */
+  min-height: 100vh;
+
 }
 
 .tech .tech-title {
@@ -58,7 +60,7 @@
 }
 
 .tech .tech-text-box {
-  margin: 1rem 1rem 3rem;
+  margin: 1rem 1rem 0;
   color: white;
   text-align: center;
 }
@@ -86,9 +88,15 @@
   padding-bottom: 3.5rem;
 }
 
+
+
+
 @media only screen and (min-width: 768px) {
   .tech {
     background: url("../assets/tech/background-technology-tablet.jpg") no-repeat;
+    background-size: cover;
+    height: 100%;
+
   }
 
   .tech .tech-title {
@@ -147,5 +155,92 @@
     font-size: 16px;
     line-height: 28px;
     padding-bottom: 3.79rem;
+  }
+}
+
+
+
+@media only screen and (min-width: 1440px) {
+  .tech {
+    background: url("../assets/tech/background-technology-desktop.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .tech .tech-title {
+    margin: 4rem 9.5rem;
+    text-align: initial;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+  }
+
+  .tech .tech-title span {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 4.725px;
+    margin-right: 28px;
+  }
+
+  .tech .tech-container-desktop {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .tech .btn-box {
+    order: 0;
+    flex-direction: column;
+    width: 80px;
+    height: 303px;
+    margin-left: 9.5rem;
+    margin-top: 5rem;
+  }
+
+  .tech .btn-box button {
+    width: 80px;
+    height: 80px;
+    font-size: 32px;
+    line-height: 37px;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  .tech .tech-text-box {
+    margin: 0;
+    margin-right: 6.5rem;
+    margin-top: 5rem;
+    max-width: 470px;
+    height: 303px;
+
+  }
+
+  .tech .tech-text-box .tech-term {
+    text-align: left;
+    padding: 0;
+  }
+
+  .tech .tech-text-box .tech-name {
+    font-size: 56px;
+    line-height: 64px;
+    text-align: left;
+    width: 470px;
+
+  }
+
+  .tech .tech-desc {
+    font-size: 18px;
+    line-height: 32px;
+    padding-bottom: 0;
+    text-align: left;
+    width: 444px;
+
+  }
+
+  .tech .tech-img {
+    width: 515px;
+    height: 527px;
+    margin: 0;
+    order: 3;
+    margin-bottom: 3.5rem;
   }
 }

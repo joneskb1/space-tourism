@@ -5,6 +5,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Tech from "./pages/Tech.js";
 import Crew from "./pages/Crew";
 
+
+// make it all responsive & active states
+
 function App() {
   return (
     <div className='App'>

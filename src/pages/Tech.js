@@ -1,13 +1,25 @@
 import "./Tech.css";
 import Navbar from "../components/Navbar";
 import { useFetch } from "../hooks/useFetch";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useWindowSize from "../hooks/useWindowSize";
 
 export default function Tech() {
   const { data, isPending, error } = useFetch(
     "http://localhost:8000/technology"
   );
+  const { windowSize } = useWindowSize();
   const [num, setNum] = useState(0);
+  const [orientation, setOrientation] = useState("");
+
+  useEffect(() => {
+    if (windowSize.innerWidth >= 1440) {
+      setOrientation("portrait");
+    } else {
+      setOrientation("landscape");
+    }
+  }, [windowSize]);
+
 
   function updateTech(num) {
     setNum(num);
@@ -23,7 +35,8 @@ export default function Tech() {
           <p className='tech-title'>
             <span>03</span>SPACE LAUNCH 101
           </p>
-          <img className='tech-img' src={`.${data[num].images.landscape}`} />
+          <div className="tech-container-desktop">
+          <img className='tech-img' src={`.${data[num].images[orientation]}`} />
 
           <div className='btn-box'>
             <button
@@ -49,6 +62,7 @@ export default function Tech() {
             <p className='tech-term'>THE TERMINOLOGY...</p>
             <p className='tech-name'>{data[num].name}</p>
             <p className='tech-desc'>{data[num].description}</p>
+          </div>
           </div>
         </>
       )}
