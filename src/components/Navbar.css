@@ -108,12 +108,11 @@
     font-size: 14px;
     line-height: 16.8px;
     letter-spacing: 2.36px;
-    cursor: pointer;
   }
 
   .navbar .list-large-screen a.active {
     border-bottom: 3px solid white;
-    padding-bottom: 2rem;
+    padding-bottom: 1.9rem;
   }
 }
 
@@ -166,8 +165,10 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-  /* .navbar .list-large-screen a:hover,
+  .navbar .list-large-screen a:hover,
   .navbar .list-large-screen a:active {
-    border-bottom: 3px solid rgba(255, 255, 255, 0.05);
-  } */
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    padding-bottom: 1.9rem;
+  }
 }

@@ -87,6 +87,8 @@
   text-align: center;
   color: var(--gray);
   padding: 0 1.4rem 4.5rem 1.4rem;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 @media only screen and (min-width: 768px) {
@@ -222,6 +224,8 @@
     font-size: 18px;
     line-height: 32px;
     max-width: 444px;
+    margin: 0;
+
   }
 
   .crew .dot-box {
@@ -238,4 +242,12 @@
   }
 
 
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .crew .dot-box a:hover,
+  .crew .dot-box a:active  {
+    opacity: 0.5;
+
+  }
 }

@@ -48,7 +48,7 @@
   padding-bottom: 0.4rem;
 }
 
-.destination .active {
+.destination .content-box .text-container .destination-list .active {
   color: white;
   border-bottom: 3px solid white;
 }
@@ -67,6 +67,9 @@
   text-align: center;
   line-height: 25px;
   margin: 1rem 1.5rem;
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 0 .5rem;
 }
 
 .destination hr {
@@ -255,5 +258,15 @@
 
   .destination .top {
     margin-bottom: 0;
+  }
+}
+
+
+
+@media (hover: hover) and (pointer: fine) {
+  .destination .text-container .destination-list a:hover,
+  .destination .text-container .destination-list a:active {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+    cursor: pointer;
   }
 }

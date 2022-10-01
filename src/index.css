@@ -56,3 +56,8 @@ h5 {
   letter-spacing: 2.7px;
   font-family: "Barlow Condensed", sans-serif;
 }
+
+
+.error {
+  color: white;
+}

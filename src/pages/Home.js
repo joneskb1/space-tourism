@@ -17,10 +17,12 @@ export default function Home() {
             world experience!
           </p>
         </div>
+        <div className="circle-container">
         <div className='circle'>
           <Link to='/destination' className='explore-btn'>
             Explore
           </Link>
+        </div>
         </div>
       </div>
     </div>

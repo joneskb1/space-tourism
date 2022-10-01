@@ -28,8 +28,8 @@ export default function Tech() {
   return (
     <div className='tech'>
       <Navbar />
-      {isPending && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {isPending && <p className="error">Loading...</p>}
+      {error && <p className="error">{error}</p>}
       {data && (
         <>
           <p className='tech-title'>

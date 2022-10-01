@@ -15,8 +15,8 @@ export default function Crew() {
   return (
     <div className='crew'>
       <Navbar />
-      {isPending && <p>Loading...</p>}
-      {error && <p>{error}</p>}
+      {isPending && <p className="error">Loading...</p>}
+      {error && <p className="error">{error}</p>}
       {data && (
         <>
           <p className='crew-title'>

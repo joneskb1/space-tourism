@@ -53,7 +53,6 @@
   letter-spacing: 1.25px;
   line-height: 22.92px;
   text-transform: uppercase;
-  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -85,6 +84,10 @@
     max-width: 444px;
   }
 
+  .home .circle-container {
+    padding-bottom: 5rem;
+  }
+
   .home .circle {
     width: 242px;
     height: 242px;
@@ -108,6 +111,7 @@
     display: flex;
     margin-top: 251px;
     justify-content: space-around;
+    padding-bottom: 5rem;
   }
 
   .home .text-container {
@@ -140,10 +144,27 @@
     max-width: initial;
   }
 
+  .home .circle-container {
+    padding-bottom: 0;
+  }
+
   .home .circle {
     width: 274px;
     height: 274px;
     margin: 0;
     align-self: flex-end;
   }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .home .circle:hover,
+  .home .cirle:active {
+    box-shadow: 0 0 0 88px rgba(255,255,255,.1);
+  }
+
+  .home .explore-btn:hover,
+  .home .explore-btn:active {
+    cursor: pointer;
+  }
+
 }
