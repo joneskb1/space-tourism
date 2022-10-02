@@ -1,6 +1,7 @@
 .home {
   background: url("../assets/home/background-home-mobile.jpg") no-repeat;
   background-size: cover;
+  background-position: bottom center;
   min-height: 100vh;
 }
 
@@ -55,10 +56,11 @@
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .home {
     background: url("../assets/home/background-home-tablet.jpg") no-repeat;
     background-size: cover;
+    background-position: center center;
     min-height: 100vh;
   }
 
@@ -101,7 +103,8 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+
+@media only screen and (min-width: 1100px) {
   .home {
     background: url("../assets/home/background-home-desktop.jpg") no-repeat;
     background-size: cover;

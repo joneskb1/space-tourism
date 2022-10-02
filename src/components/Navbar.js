@@ -3,8 +3,9 @@ import logo from "../assets/shared/logo.svg";
 import hamburger from "../assets/shared/icon-hamburger.svg";
 import closeIcon from "../assets/shared/icon-close.svg";
 import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
 import useWindowSize from "../hooks/useWindowSize.js";
+import { NavContext } from "../context/NavContext";
 
 const pathNums = {
   "/": 0,
@@ -14,22 +15,18 @@ const pathNums = {
 };
 
 export default function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const { windowSize } = useWindowSize();
   const [num, setNum] = useState(0);
   const location = useLocation();
+  const context = useContext(NavContext);
 
   useEffect(() => {
     setNum(pathNums[location.pathname]);
   }, [location]);
 
-  function toggleMenu() {
-    setMenuOpen((cur) => !cur);
-  }
-
   useEffect(() => {
-    if (windowSize.innerWidth < 768 && menuOpen === true) {
-      setMenuOpen((cur) => !cur);
+    if (windowSize.innerWidth < 768 && context.isOpen === true) {
+      context.closeMenu();
     }
   }, [windowSize]);
 
@@ -39,7 +36,7 @@ export default function Navbar() {
         <img src={logo} alt='logo image' className='logo' />
         <img
           src={hamburger}
-          onClick={toggleMenu}
+          onClick={context.toggleMenu}
           alt='menu open icon'
           className={`hamburger`}
         />
@@ -67,31 +64,32 @@ export default function Navbar() {
           </li>
         </ul>
       </nav>
-      <nav className={`nav-popout ${menuOpen ? "" : "hide"}`}>
+      <nav className={`nav-popout ${context.isOpen ? "" : "hide"}`}
+      onClick={(e) => e.stopPropagation()}>
         <img
           src={closeIcon}
           alt='menu close icon'
           className={`close-icon`}
-          onClick={toggleMenu}
+          onClick={context.toggleMenu}
         />
         <ul>
           <li>
-            <Link to='/'>
+            <Link to='/' onClick={context.closeMenu}>
               <span>00</span> HOME
             </Link>
           </li>
           <li>
-            <Link to='/destination'>
+            <Link to='/destination' onClick={context.closeMenu}>
               <span>01</span> DESTINATION
             </Link>
           </li>
           <li>
-            <Link to='/crew'>
+            <Link to='/crew' onClick={context.closeMenu}>
               <span>02</span> CREW
             </Link>
           </li>
           <li>
-            <Link to='/technology'>
+            <Link to='/technology' onClick={context.closeMenu}>
               <span>03</span> TECHNOLOGY
             </Link>
           </li>
