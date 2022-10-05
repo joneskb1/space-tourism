@@ -19,11 +19,14 @@ export default function Crew() {
       {error && <p className="error">{error}</p>}
       {data && (
         <>
+        <div className="wrapper">
           <p className='crew-title'>
             <span>02</span>MEET YOUR CREW
           </p>
-          <div className='grid-box'>
-            <img className='crew-img' src={`.${data[num].images.png}`} />
+           <picture>
+                 <source  src={`.${data[num].images.webp}`} type="image/webp"/>
+                 <img  className='crew-img'  src={`.${data[num].images.png}`} alt="crew member image"/>
+            </picture>
             <hr></hr>
             <div className='dot-box'>
               <Link

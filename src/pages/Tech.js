@@ -32,10 +32,10 @@ export default function Tech() {
       {error && <p className="error">{error}</p>}
       {data && (
         <>
+        <div className="wrapper">
           <p className='tech-title'>
             <span>03</span>SPACE LAUNCH 101
           </p>
-          <div className="tech-container-desktop">
           <img className='tech-img' src={`.${data[num].images[orientation]}`} />
 
           <div className='btn-box'>

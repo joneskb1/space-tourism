@@ -169,12 +169,22 @@
     background-size: cover;
   }
 
+  .tech .wrapper {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) 220px repeat(2, minmax(0, 30rem));
+    grid-template-rows: 100px 650px;
+    min-height: calc(100vh - 132px);
+    align-items: center;
+    /* column-gap: 5%; */
+}
+
   .tech .tech-title {
-    margin: 4rem 9.5rem;
-    text-align: initial;
+    grid-row: 1/2;
+    grid-column: 2/4;
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 4.725px;
+    margin: 0;
   }
 
   .tech .tech-title span {
@@ -184,19 +194,15 @@
     margin-right: 28px;
   }
 
-  .tech .tech-container-desktop {
-    display: flex;
-    align-items: flex-start;
-    position: relative;
-  }
 
   .tech .btn-box {
-    order: 0;
     flex-direction: column;
     width: 80px;
     height: 303px;
-    margin-left: 9.5rem;
-    margin-top: 5rem;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-self: start;
+    margin: 0;
   }
 
   .tech .btn-box button {
@@ -210,10 +216,12 @@
 
   .tech .tech-text-box {
     margin: 0;
-    margin-right: 6.5rem;
-    margin-top: 5rem;
     max-width: 470px;
     height: 303px;
+    grid-row: 2/3;
+    grid-column: 3/4;
+    justify-self: start;
+
 
   }
 
@@ -245,8 +253,9 @@
     width: 515px;
     height: 527px;
     margin: 0;
-    order: 3;
-    margin-bottom: 3.5rem;
+    grid-row: 1/3;
+    grid-column: 4/5;
+    justify-self: end;
   }
 }
 

@@ -104,7 +104,7 @@
 }
 
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1440px) {
   .home {
     background: url("../assets/home/background-home-desktop.jpg") no-repeat;
     background-size: cover;
@@ -112,15 +112,17 @@
 
   .home .content-container {
     display: flex;
-    margin-top: 251px;
     justify-content: space-around;
-    padding-bottom: 5rem;
+    align-items: center;
+    width: 100vw;
+    min-height: calc(100vh - 132px);
   }
 
   .home .text-container {
     width: 450px;
     height: 382px;
     margin: 0;
+    margin-top: 10%;
     padding: 0;
   }
 
@@ -149,6 +151,8 @@
 
   .home .circle-container {
     padding-bottom: 0;
+    margin-top: 15%;
+
   }
 
   .home .circle {

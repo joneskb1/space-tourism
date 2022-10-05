@@ -47,7 +47,7 @@
   padding-bottom: 0.4rem;
 }
 
-.destination .content-box .text-container .destination-list .active {
+.destination .wrapper .text-container .destination-list .active {
   color: white;
   border-bottom: 3px solid white;
 }
@@ -74,7 +74,7 @@
 .destination hr {
   background-color: #383b4b;
   height: 1px;
-  width: 327px;
+  max-width: 327px;
   border: none;
   margin: 0 auto;
 }
@@ -111,8 +111,8 @@
     background: url("../assets/destination/background-destination-tablet.jpg")
       no-repeat;
     background-size: cover;
-
   }
+  
 
   .destination .destination-title {
     margin-left: 39px;
@@ -156,7 +156,7 @@
   }
 
   .destination hr {
-    width: 573px;
+    max-width: 573px;
   }
   .destination .stat-box {
     display: flex;
@@ -166,20 +166,30 @@
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 1440px) {
   .destination {
     background: url("../assets/destination/background-destination-desktop.jpg")
       no-repeat;
     background-size: cover;
-  
+    background-position: center center;
+  }
+
+  .destination .wrapper {
+    display: grid;
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-rows: 100px 650px;
+    min-height: calc(100vh - 132px);
+    align-items: center;
+    column-gap: 5%;
   }
 
   .destination .destination-title {
-    margin: 4rem 9.5rem;
-    text-align: initial;
+    grid-column: 2/3;
     font-size: 28px;
     line-height: 34px;
     letter-spacing: 4.725px;
+    justify-self: left;
+    margin: 0;
   }
 
   .destination .destination-title span {
@@ -189,22 +199,25 @@
     margin-right: 28px;
   }
 
-  .destination .content-box {
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 6.5rem;
+  .destination .wrapper picture {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
   }
-
-  .destination .destination-img {
+  .destination .wrapper picture .destination-img {
     width: 445px;
     height: 445px;
     margin: 0;
-    margin-left: 8rem;
   }
 
   .destination .text-container {
     width: 445px;
     height: 472px;
+    grid-column: 3/4;
+    grid-row: 2/3;
+    justify-self: center;
+    align-self: center;
   }
 
   .destination .destination-list {
@@ -234,7 +247,7 @@
   }
 
   .destination hr {
-    width: 444px;
+    max-width: 444px;
   }
 
   .destination .stat-box {

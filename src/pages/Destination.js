@@ -22,15 +22,14 @@ export default function Destination() {
         {error && <p className="error">{error}</p>}
         {data && (
           <>
+          <div className="wrapper">
             <p className='destination-title'>
               <span>01</span>PICK YOUR DESTINATION
             </p>
-
-            <div className='content-box'>
-              <img
-                className='destination-img'
-                src={`.${data[num].images.png}`}
-              />
+              <picture>
+                 <source  src={`.${data[num].images.webp}`} type="image/webp"/>
+                 <img   className='destination-img'  src={`.${data[num].images.png}`} alt="the moon"/>
+               </picture>
               <div className='text-container'>
                 <div className='destination-list'>
                   <Link
