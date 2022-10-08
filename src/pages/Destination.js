@@ -32,25 +32,25 @@ export default function Destination() {
                </picture>
               <div className='text-container'>
                 <div className='destination-list'>
-                  <Link
+                  <Link 
                     onClick={() => updatePlanet(0)}
                     className={num === 0 ? "active" : ""}
                   >
                     MOON
                   </Link>
-                  <Link
+                  <Link 
                     onClick={() => updatePlanet(1)}
                     className={num === 1 ? "active" : ""}
                   >
                     MARS
                   </Link>
-                  <Link
+                  <Link 
                     onClick={() => updatePlanet(2)}
                     className={num === 2 ? "active" : ""}
                   >
                     EUROPA
-                  </Link>
-                  <Link
+                  </Link> 
+                  <Link 
                     onClick={() => updatePlanet(3)}
                     className={num === 3 ? "active" : ""}
                   >

@@ -36,21 +36,21 @@ export default function Tech() {
           <h5 className='tech-title'>
             <span>03</span>SPACE LAUNCH 101
           </h5>
-          <img className='tech-img' src={`.${data[num].images[orientation]}`} />
+          <img className='tech-img' src={`.${data[num].images[orientation]}`} alt="space tech image"/>
           <div className='btn-box'>
-            <button
+            <button  aria-label="Launch vehicle tab"
               onClick={() => updateTech(0)}
               className={num === 0 ? "active" : ""}
             >
               1
             </button>
-            <button
+            <button aria-label="Spaceport tab"
               onClick={() => updateTech(1)}
               className={num === 1 ? "active" : ""}
             >
               2
             </button>
-            <button
+            <button aria-label="Space capsule tab"
               onClick={() => updateTech(2)}
               className={num === 2 ? "active" : ""}
             >

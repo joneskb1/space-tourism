@@ -29,19 +29,19 @@ export default function Crew() {
             </picture>
             <hr></hr>
             <div className='dot-box'>
-              <Link
+              <Link aria-label="Douglas Hurley tab"
                 onClick={() => updateCrew(0)}
                 className={num === 0 ? "active" : ""}
               ></Link>
-              <Link
+              <Link aria-label="Mark Shuttleworth tab"
                 onClick={() => updateCrew(1)}
                 className={num === 1 ? "active" : ""}
               ></Link>
-              <Link
+              <Link aria-label="Victor Glover tab"
                 onClick={() => updateCrew(2)}
                 className={num === 2 ? "active" : ""}
               ></Link>
-              <Link
+              <Link aria-label="Anousheh Ansari tab"
                 onClick={() => updateCrew(3)}
                 className={num === 3 ? "active" : ""}
               ></Link>

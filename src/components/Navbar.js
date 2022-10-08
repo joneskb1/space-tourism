@@ -30,6 +30,11 @@ export default function Navbar() {
     }
   }, [windowSize]);
 
+  function handleKeyPress(e) {
+    if (e.keyCode !== 13) return;
+    context.toggleMenu();
+  }
+
   return (
     <>
       <nav className='navbar'>
@@ -39,6 +44,8 @@ export default function Navbar() {
           onClick={context.toggleMenu}
           alt='menu open icon'
           className={`hamburger`}
+          tabIndex="1"
+          onKeyDown={handleKeyPress}
         />
         <hr></hr>
         <ul className='list-large-screen'>
@@ -71,6 +78,9 @@ export default function Navbar() {
           alt='menu close icon'
           className={`close-icon`}
           onClick={context.toggleMenu}
+          onKeyDown={handleKeyPress}
+          tabIndex="1"
+
         />
         <ul>
           <li>
