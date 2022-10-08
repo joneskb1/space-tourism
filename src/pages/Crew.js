@@ -20,9 +20,9 @@ export default function Crew() {
       {data && (
         <>
         <div className="wrapper">
-          <p className='crew-title'>
+          <h5 className='crew-title'>
             <span>02</span>MEET YOUR CREW
-          </p>
+          </h5>
            <picture>
                  <source  src={`.${data[num].images.webp}`} type="image/webp"/>
                  <img  className='crew-img'  src={`.${data[num].images.png}`} alt="crew member image"/>
@@ -47,8 +47,8 @@ export default function Crew() {
               ></Link>
             </div>
             <div className='crew-text-box'>
-              <p className='role'>{data[num].role}</p>
-              <p className='name'>{data[num].name}</p>
+              <h4 className='role'>{data[num].role}</h4>
+              <h3 className='name'>{data[num].name}</h3>
               <p className='bio'>{data[num].bio}</p>
             </div>
           </div>

@@ -23,12 +23,12 @@ export default function Destination() {
         {data && (
           <>
           <div className="wrapper">
-            <p className='destination-title'>
+            <h5 className='destination-title'>
               <span>01</span>PICK YOUR DESTINATION
-            </p>
+            </h5>
               <picture>
                  <source  src={`.${data[num].images.webp}`} type="image/webp"/>
-                 <img   className='destination-img'  src={`.${data[num].images.png}`} alt="the moon"/>
+                 <img   className='destination-img'  src={`.${data[num].images.png}`} alt="the destination planet"/>
                </picture>
               <div className='text-container'>
                 <div className='destination-list'>
@@ -57,16 +57,16 @@ export default function Destination() {
                     TITAN
                   </Link>
                 </div>
-                <h3 className='planet-name'>{data[num].name}</h3>
+                <h2 className='planet-name'>{data[num].name}</h2>
                 <p className='planet-desc'>{data[num].description}</p>
                 <hr></hr>
                 <div className='stat-box'>
                   <div className='stat-item'>
-                    <p className='stat-title'>AVG. DISTANCE</p>
+                    <h3 className='stat-title'>AVG. DISTANCE</h3>
                     <p className='planet-stat top'>{data[num].distance}</p>
                   </div>
                   <div className='stat-item'>
-                    <p className='stat-title'>EST. TRAVEL TIME</p>
+                    <h3 className='stat-title'>EST. TRAVEL TIME</h3>
                     <p className='planet-stat'>{data[num].travel}</p>
                   </div>
                 </div>

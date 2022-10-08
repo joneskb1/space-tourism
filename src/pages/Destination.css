@@ -58,6 +58,7 @@
   text-align: center;
   line-height: 64px;
   margin-top: 1rem;
+  font-size: 56px;
 }
 
 .destination .planet-desc {
@@ -106,7 +107,14 @@
   margin-bottom: 2rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (max-width: 200px) {
+  .destination .destination-list a {
+    margin: 0;
+    padding: .2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
   .destination {
     background: url("../assets/destination/background-destination-tablet.jpg")
       no-repeat;
@@ -166,7 +174,7 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1200px) {
   .destination {
     background: url("../assets/destination/background-destination-desktop.jpg")
       no-repeat;
@@ -177,10 +185,11 @@
   .destination .wrapper {
     display: grid;
     grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
-    grid-template-rows: 100px 650px;
+    grid-template-rows: 100px 668px;
     min-height: calc(100vh - 132px);
     align-items: center;
     column-gap: 5%;
+    place-content: center;
   }
 
   .destination .destination-title {

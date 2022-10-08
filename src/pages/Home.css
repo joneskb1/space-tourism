@@ -25,6 +25,9 @@
   color: var(--white);
   padding: 1rem 0 1rem 0;
   text-transform: uppercase;
+  display: block;
+  font-family: 'Bellefair';
+
 }
 
 .home .body-text {
@@ -37,7 +40,7 @@
 }
 
 .home .circle {
-  width: 150px;
+  max-width: 150px;
   height: 150px;
   border-radius: 100%;
   background-color: white;
@@ -54,6 +57,12 @@
   letter-spacing: 1.25px;
   line-height: 22.92px;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 200px) {
+  .home .feature-text {
+  font-size: 60px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -91,7 +100,7 @@
   }
 
   .home .circle {
-    width: 242px;
+    max-width: 242px;
     height: 242px;
     margin: 7rem auto auto auto;
   }
@@ -104,7 +113,7 @@
 }
 
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1200px) {
   .home {
     background: url("../assets/home/background-home-desktop.jpg") no-repeat;
     background-size: cover;
@@ -157,6 +166,7 @@
 
   .home .circle {
     width: 274px;
+    max-width: 274px;
     height: 274px;
     margin: 0;
     align-self: flex-end;

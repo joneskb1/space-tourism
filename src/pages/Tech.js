@@ -13,7 +13,7 @@ export default function Tech() {
   const [orientation, setOrientation] = useState("");
 
   useEffect(() => {
-    if (windowSize.innerWidth >= 1440) {
+    if (windowSize.innerWidth >= 1200) {
       setOrientation("portrait");
     } else {
       setOrientation("landscape");
@@ -33,11 +33,10 @@ export default function Tech() {
       {data && (
         <>
         <div className="wrapper">
-          <p className='tech-title'>
+          <h5 className='tech-title'>
             <span>03</span>SPACE LAUNCH 101
-          </p>
+          </h5>
           <img className='tech-img' src={`.${data[num].images[orientation]}`} />
-
           <div className='btn-box'>
             <button
               onClick={() => updateTech(0)}
@@ -59,8 +58,8 @@ export default function Tech() {
             </button>
           </div>
           <div className='tech-text-box'>
-            <p className='tech-term'>THE TERMINOLOGY...</p>
-            <p className='tech-name'>{data[num].name}</p>
+            <h6 className='tech-term'>THE TERMINOLOGY...</h6>
+            <h3 className='tech-name'>{data[num].name}</h3>
             <p className='tech-desc'>{data[num].description}</p>
           </div>
           </div>

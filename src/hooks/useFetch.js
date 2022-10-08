@@ -18,7 +18,7 @@ export const useFetch = (url) => {
       setData(data);
     } catch (err) {
       setIsPending(false);
-      setError("Couldn't get data");
+      setError("Could not get data :(");
     }
   };
 

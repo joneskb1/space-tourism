@@ -60,4 +60,14 @@ h5 {
 
 .error {
   color: white;
+  font-size: 40px;
+  width: 300px;
+  height: 300px;
+  margin: 20% auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, .5);
+  border-radius: 50%;
 }
