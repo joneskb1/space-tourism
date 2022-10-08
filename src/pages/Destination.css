@@ -184,12 +184,12 @@
 
   .destination .wrapper {
     display: grid;
-    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, calc(32.222rem + 5%))) minmax(1rem, 1fr);
     grid-template-rows: 100px 668px;
     min-height: calc(100vh - 132px);
     align-items: center;
     column-gap: 5%;
-    place-content: center;
+    place-content: center center;
   }
 
   .destination .destination-title {

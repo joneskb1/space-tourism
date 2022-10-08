@@ -170,12 +170,12 @@
 
   .tech .wrapper {
     display: grid;
-    grid-template-columns: 0 minmax(0, 5rem) minmax(0, 25rem) minmax(1rem, 30rem) 0;
+    grid-template-columns: minmax(1rem, 1fr) 80px repeat(2, minmax(0, 30rem)) minmax(1rem, 1fr);
     grid-template-rows: 100px 668px;
     min-height: calc(100vh - 132px);
     align-items: center;
-    place-content: center;
-    column-gap: clamp(5%, 5%, 10%);
+    place-content: center center;
+    column-gap: 5%;
 }
 
   .tech .tech-title {
