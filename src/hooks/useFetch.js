@@ -10,6 +10,7 @@ export const useFetch = (url) => {
     try {
       const res = await fetch(url);
       if (!res.ok) {
+        console.log(res);
         throw new Error(res.statusText);
       }
       const data = await res.json();
@@ -18,6 +19,7 @@ export const useFetch = (url) => {
       setData(data);
     } catch (err) {
       setIsPending(false);
+      console.log(err)
       setError("Could not get data :(");
     }
   };
