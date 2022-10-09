@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Crew() {
-  const { data, isPending, error } = useFetch("http://localhost:8000/crew");
+  const { data, isPending, error } = useFetch("https://react-space-tourism.herokuapp.com/crew");
   const [num, setNum] = useState(0);
 
   function updateCrew(num) {

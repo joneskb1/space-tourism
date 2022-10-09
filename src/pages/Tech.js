@@ -6,7 +6,7 @@ import useWindowSize from "../hooks/useWindowSize";
 
 export default function Tech() {
   const { data, isPending, error } = useFetch(
-    "http://localhost:8000/technology"
+    "https://react-space-tourism.herokuapp.com/technology"
   );
   const { windowSize } = useWindowSize();
   const [num, setNum] = useState(0);

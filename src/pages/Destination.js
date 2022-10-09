@@ -6,7 +6,7 @@ import { useFetch } from "../hooks/useFetch";
 
 export default function Destination() {
   const { data, isPending, error } = useFetch(
-    "http://localhost:8000/destinations"
+    "https://react-space-tourism.herokuapp.com/destinations"
   );
   const [num, setNum] = useState(0);
 
