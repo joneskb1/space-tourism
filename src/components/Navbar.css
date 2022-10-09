@@ -67,12 +67,11 @@
 }
 
 .nav-popout.hide,
-.navbar .list-large-screen,
-.navbar hr {
+.navbar .list-large-screen{
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   .navbar .hamburger,
   .nav-popout {
     display: none;
@@ -117,9 +116,8 @@
   }
 }
 
-@media only screen and (min-width: 1440px) {
-  .navbar .list-large-screen li span,
-  .navbar hr {
+@media only screen and (min-width: 1200px) {
+  .navbar .list-large-screen li span {
     display: inline;
   }
 
@@ -129,22 +127,23 @@
   }
 
   .navbar .logo {
-    margin: 0 0 0 55px;
+    margin: 0 2rem 0 55px;
   }
 
-  .navbar hr {
-    width: 473px;
+
+  .navbar::after {
+    content: '';
+    display: block;
     height: 1px;
+    width: 100%;
+    margin-right: -1.5rem;
     background-color: white;
     opacity: 0.25;
-    position: absolute;
-    top: auto;
-    left: 9rem;
-    z-index: 2;
   }
 
   .navbar .list-large-screen {
-    width: 830px;
+    min-width: 830px;
+    order: 3;
   }
 
   .navbar .list-large-screen li span,

@@ -5,6 +5,7 @@
   min-height: 100vh;
 }
 
+
 .home .text-container {
   margin: 0 auto;
 }
@@ -39,6 +40,10 @@
   margin: 0 auto;
 }
 
+.home .circle-container {
+  padding-bottom: 15%;
+}
+
 .home .circle {
   max-width: 150px;
   height: 150px;
@@ -59,10 +64,11 @@
   text-transform: uppercase;
 }
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 325px) {
   .home .feature-text {
   font-size: 60px;
   }
+
 }
 
 @media only screen and (min-width: 600px) {
@@ -125,6 +131,7 @@
     align-items: center;
     width: 100vw;
     min-height: calc(100vh - 132px);
+    padding: 5% 0;
   }
 
   .home .text-container {

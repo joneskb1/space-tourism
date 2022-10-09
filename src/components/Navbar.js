@@ -47,7 +47,6 @@ export default function Navbar() {
           tabIndex="1"
           onKeyDown={handleKeyPress}
         />
-        <hr></hr>
         <ul className='list-large-screen'>
           <li>
             <Link to='/' className={num === 0 ? "active" : ""}>
