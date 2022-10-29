@@ -5,7 +5,6 @@
   min-height: 100vh;
 }
 
-
 .home .text-container {
   margin: 0 auto;
 }
@@ -27,8 +26,7 @@
   padding: 1rem 0 1rem 0;
   text-transform: uppercase;
   display: block;
-  font-family: 'Bellefair';
-
+  font-family: "Bellefair";
 }
 
 .home .body-text {
@@ -66,9 +64,8 @@
 
 @media screen and (max-width: 325px) {
   .home .feature-text {
-  font-size: 60px;
+    font-size: 60px;
   }
-
 }
 
 @media only screen and (min-width: 600px) {
@@ -118,7 +115,6 @@
   }
 }
 
-
 @media only screen and (min-width: 1200px) {
   .home {
     background: url("../assets/home/background-home-desktop.jpg") no-repeat;
@@ -129,8 +125,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100vw;
-    min-height: calc(100vh - 132px);
+    /* width: 100vw; */
+    max-height: calc(100vh - 132px);
     padding: 5% 0;
   }
 
@@ -168,7 +164,6 @@
   .home .circle-container {
     padding-bottom: 0;
     margin-top: 15%;
-
   }
 
   .home .circle {
@@ -183,12 +178,11 @@
 @media (hover: hover) and (pointer: fine) {
   .home .circle:hover,
   .home .cirle:active {
-    box-shadow: 0 0 0 88px rgba(255,255,255,.1);
+    box-shadow: 0 0 0 88px rgba(255, 255, 255, 0.1);
   }
 
   .home .explore-btn:hover,
   .home .explore-btn:active {
     cursor: pointer;
   }
-
 }

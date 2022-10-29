@@ -6,7 +6,8 @@ function NavProvider(props) {
   const [isOpen, setIsOpen] = useState(false)
 
   function closeMenu() {
-    if(!isOpen) return;
+      if(!isOpen) return;
+
       setIsOpen(false);
     }
 

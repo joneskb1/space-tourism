@@ -37,68 +37,69 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className='navbar'>
-        <img src={logo} alt='logo image' className='logo' />
+      <nav className="navbar">
+        <img src={logo} alt="logo image" className="logo" />
         <img
           src={hamburger}
           onClick={context.toggleMenu}
-          alt='menu open icon'
+          alt="menu open icon"
           className={`hamburger`}
           tabIndex="1"
           onKeyDown={handleKeyPress}
         />
-        <ul className='list-large-screen'>
+        <ul className="list-large-screen">
           <li>
-            <Link to='/' className={num === 0 ? "active" : ""}>
+            <Link to="/" className={num === 0 ? "active" : ""}>
               <span>00</span> HOME
             </Link>
           </li>
           <li>
-            <Link to='/destination' className={num === 1 ? "active" : ""}>
+            <Link to="/destination" className={num === 1 ? "active" : ""}>
               <span>01</span> DESTINATION
             </Link>
           </li>
           <li>
-            <Link to='/crew' className={num === 2 ? "active" : ""}>
+            <Link to="/crew" className={num === 2 ? "active" : ""}>
               <span>02</span> CREW
             </Link>
           </li>
           <li>
-            <Link to='/technology' className={num === 3 ? "active" : ""}>
+            <Link to="/technology" className={num === 3 ? "active" : ""}>
               <span>03</span> TECHNOLOGY
             </Link>
           </li>
         </ul>
       </nav>
-      <nav className={`nav-popout ${context.isOpen ? "" : "hide"}`}
-      onClick={(e) => e.stopPropagation()}>
+      <nav
+        className={`nav-popout ${context.isOpen ? "" : "hide"}`}
+        onClick={(e) => e.stopPropagation()}
+      >
         <img
           src={closeIcon}
-          alt='menu close icon'
+          alt="menu close icon"
           className={`close-icon`}
           onClick={context.toggleMenu}
           onKeyDown={handleKeyPress}
           tabIndex="1"
-
         />
         <ul>
           <li>
-            <Link to='/' onClick={context.closeMenu}>
+            <Link to="/" onClick={context.closeMenu}>
               <span>00</span> HOME
             </Link>
           </li>
           <li>
-            <Link to='/destination' onClick={context.closeMenu}>
+            <Link to="/destination" onClick={context.closeMenu}>
               <span>01</span> DESTINATION
             </Link>
           </li>
           <li>
-            <Link to='/crew' onClick={context.closeMenu}>
+            <Link to="/crew" onClick={context.closeMenu}>
               <span>02</span> CREW
             </Link>
           </li>
           <li>
-            <Link to='/technology' onClick={context.closeMenu}>
+            <Link to="/technology" onClick={context.closeMenu}>
               <span>03</span> TECHNOLOGY
             </Link>
           </li>
